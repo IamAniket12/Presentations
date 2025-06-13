@@ -31,9 +31,9 @@
   --space-xxl: 64px;
   
   /* Typography Scale */
-  --text-xs: 18px;
-  --text-sm: 22px;
-  --text-base: 28px;
+  --text-xs: 16px;
+  --text-sm: 20px;
+  --text-base: 26px;
   --text-lg: 32px;
   --text-xl: 36px;
   --text-2xl: 42px;
@@ -186,6 +186,7 @@ ol li:before {
 
 /* === CONTENT BLOCKS === */
 .theorem-box {
+  font-size: var(--text-sm);
   background-color: #e8f6f3;
   border: 2px solid var(--accent-green);
   padding: var(--space-lg);
@@ -432,13 +433,13 @@ tbody tr.highlight-primary {
   font-weight: 500;
 }
 
-tbody tr.highlight-success {
+tbody td.highlight-success {
   background-color: #e8f5e8;
   border-left: 4px solid var(--accent-green);
   font-weight: 500;
 }
 
-tbody tr.highlight-warning {
+tbody td.highlight-warning {
   background-color: #fff8e1;
   border-left: 4px solid var(--accent-yellow);
   font-weight: 500;
@@ -572,4 +573,124 @@ section::after {
     background-color: #e0e0e0 !important;
     color: #000 !important;
   }
+}
+
+
+/* === RESPONSIVE IMAGE CLASS === */
+.responsive-image {
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  /* box-shadow: 0 2px 8px var(--shadow-light); */
+}
+
+.responsive-image-small {
+  max-width: 90%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  /* box-shadow: 0 2px 8px var(--shadow-light); */
+}
+
+.responsive-image-tiny {
+  max-width: 80%;
+  max-height: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  /* box-shadow: 0 2px 8px var(--shadow-light); */
+}
+
+.responsive-image-large {
+  max-width: 100%;
+  max-height: 500px;
+  width: 90%;
+  height: 500px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  /* box-shadow: 0 2px 8px var(--shadow-light); */
+}
+.responsive-image-extra-large {
+  max-width: 100%;
+  max-height: 550px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  /* box-shadow: 0 2px 8px var(--shadow-light); */
+}
+/* === FLEXIBLE SPLIT LAYOUTS === */
+.split-50-50 {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  height: auto;
+}
+
+.split-60-40 {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  height: auto;
+}
+
+.split-40-60 {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  height: auto;
+}
+
+.split-left {
+  flex: 1;
+  padding-right: var(--space-sm);
+}
+
+.split-right {
+  flex: 1;
+  padding-left: var(--space-sm);
+}
+
+.split-left-60 {
+  flex: 1.5;
+  padding-right: var(--space-sm);
+}
+
+.split-right-40 {
+  flex: 1;
+  padding-left: var(--space-sm);
+}
+
+.split-left-40 {
+  flex: 1;
+  padding-right: var(--space-sm);
+}
+
+.split-right-60 {
+  flex: 1.5;
+  padding-left: var(--space-sm);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
